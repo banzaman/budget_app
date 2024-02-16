@@ -1,15 +1,185 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2?styles=44823,44815');
+
+:root {
+  --blue: #3878c2;
+  --background: #f5f6f8;
+  --grey: #898e90;
+  --dark-grey: #333b46;
+  --green: #60b524;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  width: 300px;
+  margin: auto;
+  border: 1px solid black;
+  font-family: 'Proxima Nova', sans-serif;
+  background-color: var(--background);
+}
+
+h1 {
+  text-align: center;
+  font-weight: 800;
+  padding: 12rem 0;
+  color: #333b46;
+}
+
+.auth-link {
+  text-decoration: none;
+  padding: 0.9rem;
+  border-radius: 0.2rem;
+  width: 90%;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+  color: var(--grey);
+  margin: auto;
+  font-size: 0.9rem;
+}
+
+.login {
+  color: white;
+  margin-bottom: 0.5rem;
+  background-color: var(--blue);
+  cursor: pointer;
+}
+
+.title {
+  background-color: var(--blue);
+  margin: 0;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.title h3 {
+  font-weight: lighter;
+  width: 100%;
+  text-align: center;
+}
+
+.arrow {
+  position: absolute;
+  left: 0.65rem;
+}
+
+.fa-solid {
+  color: white;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.button_to {
+  position: fixed;
+  z-index: 5;
+}
+
+.flash {
+  padding: 0.3rem;
+  text-align: center;
+}
+
+#error_explanation {
+  padding: 0.8rem;
+}
+
+#error_explanation ul {
+  list-style: none;
+}
+
+.devise-links {
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.devise-links a {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+/* Other Containers */
+
+.categories-container {
+  padding: 0.5rem;
+}
+
+.card {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.card-link {
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+
+.card-category {
+  justify-content: space-between;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+}
+
+.card-info a {
+  text-decoration: none;
+}
+
+.category-icon {
+  background-color: lightblue;
+  width: 50px;
+  height: 50px;
+  margin-right: 0.5rem;
+}
+
+.category-new-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--green);
+  padding: 0.8rem 0;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+/* Forms */
+
+.form {
+  padding-top: 1rem;
+  box-sizing: border-box;
+}
+
+.form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.8rem;
+  border: none;
+}
+
+.form input:nth-last-child(1) {
+  margin: 0;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}

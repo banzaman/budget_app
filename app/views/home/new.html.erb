@@ -1,0 +1,11 @@
+<div class="title">
+  <%= link_to home_index_path, class: 'arrow' do %>
+    <i class="fa-solid fa-chevron-left"></i>
+  <% end %>
+  <h3>NEW CATEGORY</h3>
+</div>
+<%= form_with model: @category, url: home_create_path, html: { class: 'form' } do |f| %>
+  <%= f.text_field :name, placeholder: 'Category' %>
+  <%= f.text_field :icon, placeholder: 'Icon Name' %>
+  <%= f.submit "Submit", class: 'login' %>
+<% end %>
