@@ -7,7 +7,7 @@
     <%= link_to home_show_path(category.id), class: 'card-link' do %>
       <div class="card card-category">
         <div class='card-info'>
-          <div class="category-icon"><%= category.icon %></div>
+          <%= image_tag category.icon, class: 'category-icon' %>
           <p><%= category.name %></p>
         </div>
         <p>$<%= category.entities.sum(:amount) %></p>
