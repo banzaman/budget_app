@@ -1,0 +1,19 @@
+<div class="title">
+  <h3>CATEGORIES</h3>
+</div>
+
+<div class="categories-container">
+  <% @categories.each do |category| %>
+    <%= link_to home_show_path(category.id), class: 'card-link' do %>
+      <div class="card card-category">
+        <div class='card-info'>
+          <%= image_tag category.icon, class: 'category-icon' %>
+          <p><%= category.name %></p>
+        </div>
+        <p>$<%= category.entities.sum(:amount) %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to 'ADD CATEGORY', home_new_path, class: 'category-new-btn' %>
