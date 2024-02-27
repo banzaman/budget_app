@@ -41,7 +41,6 @@
 - Organize them into a collection
 - Preseve and load data
 - List and display the different categories
-- PostgreSQL
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

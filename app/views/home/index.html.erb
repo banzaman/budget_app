@@ -1,7 +1,6 @@
 <div class="title">
   <h3>CATEGORIES</h3>
 </div>
-
 <div class="categories-container">
   <% @categories.each do |category| %>
     <%= link_to home_show_path(category.id), class: 'card-link' do %>
@@ -15,5 +14,4 @@
     <% end %>
   <% end %>
 </div>
-
-<%= link_to 'ADD CATEGORY', home_new_path, class: 'category-new-btn' %>
+<%= link_to 'ADD CATEGORY', home_new_path, class: 'category-new-btn', style: 'position: absolute; bottom: 0;' %>
