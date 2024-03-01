@@ -14,10 +14,11 @@
 }
 
 .app-container {
-  width: 100vw;
-  margin: 0; /* CHANGED */
-  height: 100vh;
-  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+  /* border: 1px solid black; */
   font-family: 'Proxima Nova', sans-serif;
   background-color: var(--background);
 }
@@ -39,26 +40,19 @@ h1 {
   text-align: center;
   box-sizing: border-box;
   color: var(--grey);
-  margin: auto;
+
+  /* margin: auto; */
   font-size: 0.9rem;
 }
 
 .login {
   color: white;
-
-  /* margin-bottom: 0.5rem; */
+  margin-bottom: 0.5rem;
   background-color: var(--blue);
   cursor: pointer;
-  width: 100%;
-}
-
-.add-btn {
-  color: white;
-  background-color: var(--blue);
-  cursor: pointer;
-  min-width: 100%;
   position: absolute;
   bottom: 0;
+  width: 100%;
 }
 
 .title {
@@ -75,7 +69,8 @@ h1 {
 
 .title h3 {
   font-weight: lighter;
-  width: 100%;
+
+  /* width: 100%; */
   text-align: center;
 }
 
@@ -88,9 +83,10 @@ h1 {
   color: white;
 }
 
-/* .container {
+.container {
   padding: 1rem;
-} */
+}
+
 .button_to {
   position: fixed;
   z-index: 5;
@@ -121,10 +117,10 @@ h1 {
 }
 
 /* Other Containers */
-
-/* .categories-container {
+.categories-container {
   padding: 0.5rem;
-} */
+}
+
 .card {
   margin-bottom: 0.5rem;
   padding: 0.5rem;
@@ -171,10 +167,24 @@ h1 {
   bottom: 0;
 }
 
+.category-new-btn2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--green);
+  padding: 0.8rem 0;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  bottom: 0;
+}
+
 /* Forms */
 .form {
   padding-top: 1rem;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .form input {
@@ -192,12 +202,32 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  /* height: 100%; */
 }
 
-.logout-btn {
-  padding: 4px 6px;
+.new-form {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.8rem;
+  border: none;
+}
+
+/* .splash {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+} */
+.signup {
+  width: 100%;
+
+  /* position: absolute;
+  bottom: 0; */
+}
+
+.signout-btn {
+  right: 0;
+  padding: 4px 8px;
   background-color: dodgerblue;
-  border: 1px solid navy;
   color: white;
-  border-radius: 4px;
 }

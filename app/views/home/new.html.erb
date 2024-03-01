@@ -4,8 +4,8 @@
   <% end %>
   <h3>NEW CATEGORY</h3>
 </div>
-<%= form_with model: @category, url: home_create_path, html: { class: 'form' } do |f| %>
+<%= form_with model: @transaction, url: home_create_path, html: { class: 'form' } do |f| %>
   <%= f.text_field :name, placeholder: 'Category' %>
   <%= f.text_field :icon, placeholder: 'Paste icon URL here' %>
-  <%= f.submit "Submit", class: 'add-btn' %>
+  <%= f.submit "Submit", class: 'login' %>
 <% end %>
