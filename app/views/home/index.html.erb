@@ -1,5 +1,5 @@
 <div class="title">
-  <h3>CATEGORIES</h3>
+  <h3 style="margin-left: 27%;">CATEGORIES</h3>
 </div>
 <div class="categories-container">
   <% @categories.each do |category| %>
@@ -14,3 +14,5 @@
     <% end %>
   <% end %>
 </div>
+
+<%= link_to 'ADD CATEGORY', home_new2_path, class: 'category-new-btn2' %>
