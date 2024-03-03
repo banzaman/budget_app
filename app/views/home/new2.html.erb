@@ -1,0 +1,14 @@
+<div class="title">
+  <%= link_to home_index_path, class: 'arrow' do %>
+    <i class="fa-solid fa-chevron-left"></i>
+  <% end %>
+  <h3 style="margin-left: 27%">NEW CATEGORY</h3>
+</div>
+<%= form_with model: @category, url: home_create_path, html: { class: 'form' } do |f| %>
+  <%= f.text_field :name, :required => true, placeholder: 'Category', style: 'margin-top: 30px;' %><br />
+  <%= f.text_field :icon, placeholder: 'Paste icon URL here' %><br />
+  <div class="div-new-cat">
+    <%= f.submit "ADD CATEGORY", class: 'new-login', style: "width: 95%; border: 1px solid white; !important;" %>
+  </div>
+<% end %>
+</div>

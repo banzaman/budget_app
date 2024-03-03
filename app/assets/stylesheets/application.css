@@ -14,9 +14,11 @@
 }
 
 .app-container {
-  width: 300px;
-  margin: auto;
-  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+  /* border: 1px solid black; */
   font-family: 'Proxima Nova', sans-serif;
   background-color: var(--background);
 }
@@ -32,12 +34,14 @@ h1 {
   text-decoration: none;
   padding: 0.9rem;
   border-radius: 0.2rem;
-  width: 90%;
+
+  /* width: 90%; */
   display: block;
   text-align: center;
   box-sizing: border-box;
   color: var(--grey);
-  margin: auto;
+
+  /* margin: auto; */
   font-size: 0.9rem;
 }
 
@@ -46,6 +50,9 @@ h1 {
   margin-bottom: 0.5rem;
   background-color: var(--blue);
   cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .title {
@@ -62,7 +69,8 @@ h1 {
 
 .title h3 {
   font-weight: lighter;
-  width: 100%;
+
+  /* width: 100%; */
   text-align: center;
 }
 
@@ -82,6 +90,7 @@ h1 {
 .button_to {
   position: fixed;
   z-index: 5;
+  right: 0;
 }
 
 .flash {
@@ -109,7 +118,6 @@ h1 {
 }
 
 /* Other Containers */
-
 .categories-container {
   padding: 0.5rem;
 }
@@ -156,13 +164,28 @@ h1 {
   text-align: center;
   text-decoration: none;
   color: white;
+  position: absolute;
+  bottom: 0;
+}
+
+.category-new-btn2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--green);
+  padding: 0.8rem 0;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  bottom: 0;
 }
 
 /* Forms */
-
 .form {
   padding-top: 1rem;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .form input {
@@ -180,5 +203,50 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+
+  /* height: 100%; */
+}
+
+.new-form {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  height: 85%;
+}
+
+/* .splash {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+} */
+.signup {
+  width: 100%;
+
+  /* position: absolute;
+  bottom: 0; */
+}
+
+.signout-btn {
+  right: 0;
+  padding: 4px 8px;
+  background-color: #3878c2;
+  color: white;
+}
+
+.new-login {
+  background-color: transparent;
+
+  /* padding: 6px 10px; */
+  color: white;
+}
+
+.div-new-cat {
+  background-color: #60b524;
+
+  /* padding: 16px 10px 4px 15px; */
+  width: 100%;
+  height: 2.5rem;
+  position: absolute;
+  bottom: 0;
 }

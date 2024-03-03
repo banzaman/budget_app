@@ -1,11 +1,12 @@
-<div class="title">
+ <div class="title">
   <%= link_to home_index_path, class: 'arrow' do %>
     <i class="fa-solid fa-chevron-left"></i>
   <% end %>
-  <h3>NEW TRANSACTION</h3>
+  <h3 style="margin-left: 20%">NEW TRANSACTION</h3>
 </div>
 <%= form_with model: @transaction, url: transactions_create_path, html: { class: 'form' } do |f| %>
   <%= f.text_field :name, placeholder: 'Transaction' %>
   <%= f.number_field :amount, step: "0.01", placeholder: 'Amount' %>
-  <%= f.submit "Submit", class: 'category-new-btn' %>
+  <%= f.text_field :name :category, placeholder: 'Category' %>
+  <%= f.submit "SAVE TRANSACTION", class: 'category-new-btn' %>
 <% end %>
