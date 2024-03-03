@@ -17,11 +17,11 @@
   width: 100%;
   height: 100%;
   margin: 0;
+
   /* border: 1px solid black; */
   font-family: 'Proxima Nova', sans-serif;
   background-color: var(--background);
 }
-
 
 h1 {
   text-align: center;
@@ -90,7 +90,7 @@ h1 {
 .button_to {
   position: fixed;
   z-index: 5;
-  right: 0%;
+  right: 0;
 }
 
 .flash {
@@ -210,8 +210,9 @@ h1 {
 .new-form {
   width: 100%;
   box-sizing: border-box;
-  padding: 0.8rem;
+  padding: 0;
   border: none;
+  height: 85%;
 }
 
 /* .splash {
@@ -229,6 +230,23 @@ h1 {
 .signout-btn {
   right: 0;
   padding: 4px 8px;
-  background-color: dodgerblue;
+  background-color: #3878c2;
   color: white;
+}
+
+.new-login {
+  background-color: transparent;
+
+  /* padding: 6px 10px; */
+  color: white;
+}
+
+.div-new-cat {
+  background-color: #60b524;
+
+  /* padding: 16px 10px 4px 15px; */
+  width: 100%;
+  height: 2.5rem;
+  position: absolute;
+  bottom: 0;
 }

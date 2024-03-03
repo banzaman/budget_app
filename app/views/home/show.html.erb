@@ -1,18 +1,20 @@
-<div class="title">
+ <div class="title">
   <%= link_to home_index_path, class: 'arrow' do %>
     <i class="fa-solid fa-chevron-left"></i>
   <% end %>
-  <h3><%= @category.name %></h3>
+  <h3 style="margin-left: 27%;">TRANSACTIONS</h3>
 </div>
 <div>
+  <h3 style="color: #898E90; text-align: center;"><%= @category.name %></h3>
   <div class='card'>
-    <p><strong>Total</strong></p>
-    <%= @transactions.sum(:amount) %>
+    <p style="color: #898E90;"><strong>Total</strong></p>
+    <p style="color: #898E90;"><strong><%= number_to_currency(@transactions.sum(:amount), precision: 2) %></strong></p>
   </div>
   <% @transactions.each do |transaction| %>
     <div class="card">
       <p class="transaction-name"><%= transaction.name %></p>
-      <p class="transaction-amount"><%= transaction.amount %></p>
+      <p class="transaction-amount"><%= number_to_currency(transaction.amount, precision: 2) %></p>
     </div>
   <% end %>
 </div>
+<%= link_to 'ADD NEW TRANSACTION', transactions_new_path, class: 'category-new-btn' %>

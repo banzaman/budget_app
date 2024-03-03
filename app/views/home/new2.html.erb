@@ -1,34 +1,14 @@
-class HomeController < ApplicationController
-  before_action :authenticate_user!
-  def index
-    @categories = Group.includes(:entities).all
-  end
-  def show
-    @category = Group.includes(:entities).find(params[:category_id])
-    @transactions = @category.entities.order('created_at DESC')
-  end
-  def new
-    @category = Group.new
-  end
-  def new2
-    @category = Group.new
-  end
-  def create
-    @category = Group.new(category_params)
-    @category.author_id = current_user.id
-    puts @category.inspect
-    puts @category.author_id
-    if @category.save
-      puts 'Entered the redirection option.'
-      redirect_to home_index_path
-    else
-      puts 'We have an error while creating the Category.'
-      flash[:error] = @category.errors.full_messages.to_sentence
-      render :new, status: :unprocessable_entity
-    end
-  end
-  private
-  def category_params
-    params.require(:group).permit(:name, :icon)
-  end
-end
+<div class="title">
+  <%= link_to home_index_path, class: 'arrow' do %>
+    <i class="fa-solid fa-chevron-left"></i>
+  <% end %>
+  <h3 style="margin-left: 27%">NEW CATEGORY</h3>
+</div>
+<%= form_with model: @category, url: home_create_path, html: { class: 'form' } do |f| %>
+  <%= f.text_field :name, :required => true, placeholder: 'Category', style: 'margin-top: 30px;' %><br />
+  <%= f.text_field :icon, placeholder: 'Paste icon URL here' %><br />
+  <div class="div-new-cat">
+    <%= f.submit "ADD CATEGORY", class: 'new-login', style: "width: 95%; border: 1px solid white; !important;" %>
+  </div>
+<% end %>
+</div>
